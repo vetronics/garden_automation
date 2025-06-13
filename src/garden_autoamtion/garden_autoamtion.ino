@@ -7,6 +7,7 @@
 #define PRTLN(S) Serial.println()
 
 // Define infrared sensor pin
+
 #define IR 3
 
 // Define temperature sensor analog input pins
@@ -21,6 +22,7 @@
 #define BUZZER 12
 
 // Define relay output pins
+
 #define rele1 4
 #define rele2 6
 #define rele3 7
@@ -54,15 +56,15 @@ void loop() {
 
   // Read raw values from temperature sensors
 
-  unsigned int sensor1 = analogRead(temp1);
-  unsigned int sensor2 = analogRead(temp2);
-  unsigned int sensor3 = analogRead(temp3);
+    unsigned int sensor1 = analogRead(temp1);
+    unsigned int sensor2 = analogRead(temp2);
+    unsigned int sensor3 = analogRead(temp3);
 
   // Map raw sensor values to a 0–100 scale
 
-  unsigned int temp_map   =   map(sensor1, 0, 1023, 0, 100);
-  unsigned int temp_map_2 = map(sensor2, 0, 1023, 0, 100);
-  unsigned int temp_map_3 = map(sensor3, 0, 1023, 0, 100);
+    unsigned int temp_map = map(sensor1, 0, 1023, 0, 100);
+    unsigned int temp_map_2 = map(sensor2, 0, 1023, 0, 100);
+    unsigned int temp_map_3 = map(sensor3, 0, 1023, 0, 100);
 
   // Read distance from ultrasonic sensor
 

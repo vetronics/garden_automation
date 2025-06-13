@@ -23,21 +23,19 @@ void debug_sensors(unsigned int &temp_map, unsigned int &temp_map_2, unsigned in
 
   delay(200);
 
-   PRTLN(temp_map);
+  PRTLN(temp_map);
 
   printf("Temp sensor 2:\n");
 
   delay(300);
 
-   PRTLN(temp_map_2);
+  PRTLN(temp_map_2);
 
   printf("Temp sensor 3:\n");
 
   delay(400);
 
-   PRTLN(temp_map_3);
-
-
+  PRTLN(temp_map_3);
 }
 
 #endif
@@ -45,9 +43,8 @@ void debug_sensors(unsigned int &temp_map, unsigned int &temp_map_2, unsigned in
 // Procedure (lambda) to control relays based on temperature
 
 auto rele_control = [](unsigned int &temp_map, unsigned int &temp_map_2, unsigned int &temp_map_3) {
-
   // millis variables
-  
+
   int unsigned long t1, t2;
 
   t1 = millis();
