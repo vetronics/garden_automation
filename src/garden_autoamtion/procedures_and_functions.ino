@@ -11,7 +11,7 @@
 
 // Debug procedure: prints sensor values with controlled delay for monitoring
 
-void debug_sensors(unsigned int &temp_map, unsigned int &temp_map_2, unsigned int &temp_map_3, int &distance, int unsigned &level_update) {
+void debug_sensors(unsigned int &temp_map, unsigned int &temp_map_2, unsigned int &temp_map_3, int &distance) {
 
   printf("Water level by ultrasonic tof:\n");
 
@@ -37,11 +37,7 @@ void debug_sensors(unsigned int &temp_map, unsigned int &temp_map_2, unsigned in
 
   Serial.println(temp_map_3);
 
-  printf("water level \n");
 
-  delay(200);
-
-  Serial.println(level_update);
 }
 
 #endif

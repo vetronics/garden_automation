@@ -6,10 +6,6 @@
 
 #define IR 3
 
-// define pin water level  analog input pin
-
-#define WATER_LEVEL A0
-
 // Define temperature sensor analog input pins
 
 #define temp1 A1
@@ -53,14 +49,6 @@ void setup() {
 
 void loop() {
 
-// water level by analog sensor 
-
-  int unsigned level = analogRead(WATER_LEVEL);
-
-  // Map raw sensor values to a 0–100 scale
-
-  int unsigned level_update = map(level, 0, 1023, 0, 100);
-
   // Read raw values from temperature sensors
 
   unsigned int sensor1 = analogRead(temp1);
@@ -82,7 +70,7 @@ void loop() {
   float tof = distance * 58;
 
   // Debug procedure (manually activate if needed)
-  //debug_sensors(temp_map, temp_map_2, temp_map_3, distance,level_update);
+  //debug_sensors(temp_map, temp_map_2, temp_map_3, distance);
 
   // Condition: bucket is full
 
