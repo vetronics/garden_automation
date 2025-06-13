@@ -17,25 +17,25 @@ void debug_sensors(unsigned int &temp_map, unsigned int &temp_map_2, unsigned in
 
   delay(100);
 
-  Serial.println(distance);
+  PRTLN(distance);
 
   printf("Temp sensor 1:\n");
 
   delay(200);
 
-  Serial.println(temp_map);
+   PRTLN(temp_map);
 
   printf("Temp sensor 2:\n");
 
   delay(300);
 
-  Serial.println(temp_map_2);
+   PRTLN(temp_map_2);
 
   printf("Temp sensor 3:\n");
 
   delay(400);
 
-  Serial.println(temp_map_3);
+   PRTLN(temp_map_3);
 
 
 }

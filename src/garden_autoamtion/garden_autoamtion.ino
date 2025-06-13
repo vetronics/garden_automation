@@ -2,8 +2,11 @@
 #include <Ultrasonic.h>
 #include <LibPrintf.h>
 
-// Define infrared sensor pin
+// define macro serial.println()
 
+#define PRTLN(S) Serial.println()
+
+// Define infrared sensor pin
 #define IR 3
 
 // Define temperature sensor analog input pins
@@ -57,7 +60,7 @@ void loop() {
 
   // Map raw sensor values to a 0–100 scale
 
-  unsigned int temp_map = map(sensor1, 0, 1023, 0, 100);
+  unsigned int temp_map   =   map(sensor1, 0, 1023, 0, 100);
   unsigned int temp_map_2 = map(sensor2, 0, 1023, 0, 100);
   unsigned int temp_map_3 = map(sensor3, 0, 1023, 0, 100);
 
@@ -70,13 +73,14 @@ void loop() {
   float tof = distance * 58;
 
   // Debug procedure (manually activate if needed)
+
   //debug_sensors(temp_map, temp_map_2, temp_map_3, distance);
 
   // Condition: bucket is full
 
   if (distance > 0 && distance < 12 && tof > 0.3) {
 
-    Serial.println("Bucket is full");
+    PRTLN("Bucket is full");
 
     // Call relay control lambda
 
