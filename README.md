@@ -52,7 +52,6 @@ This Arduino-based system automates plant irrigation by monitoring the **water l
 ## 🔄 Changelog (v5.0.0)
 
 - 🧠 Added `rele_control` lambda function for smart relay control
-- 🆕 Introduced analog water level reading via `WATER_LEVEL` (A0)
 - ⏱️ Time-based logic using `millis()` for activation delays
 - 🚨 Integrated IR sensor interrupt for emergency stop
 - 🔔 Improved audio-visual feedback when tank is empty
