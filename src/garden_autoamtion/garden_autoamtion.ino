@@ -72,7 +72,7 @@ void loop() {
 
   // Calculate time-of-flight (ToF) in microseconds
 
-  float tof = distance * 58;
+  float time_of_flight = distance * 58;
 
   // Debug procedure (manually activate if needed)
 
@@ -80,7 +80,7 @@ void loop() {
 
   // Condition: bucket is full
 
-  if (distance > 0 && distance < 12 && tof > 0.3) {
+  if (distance > 0 && distance < 12 &&  time_of_flight > 0.3) {
 
     PRTLN("Bucket is full");
 

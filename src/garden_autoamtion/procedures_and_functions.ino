@@ -13,7 +13,7 @@
 
 void debug_sensors(unsigned int &temp_map, unsigned int &temp_map_2, unsigned int &temp_map_3, int &distance) {
 
-  printf("Water level by ultrasonic tof:\n");
+  printf("Water level by ultrasonic time_of_flight :\n");
 
   delay(100);
 
@@ -43,7 +43,8 @@ void debug_sensors(unsigned int &temp_map, unsigned int &temp_map_2, unsigned in
 // Procedure (lambda) to control relays based on temperature
 
 auto rele_control = [](unsigned int &temp_map, unsigned int &temp_map_2, unsigned int &temp_map_3) {
-  // millis variables
+
+  // millis variables , t1 is previous time about the task , t2 is time about right now 
 
   int unsigned long t1, t2;
 
